@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> ORDER PLACED | E-COMMERCE WEBSITE BY RISHI</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://yt3.ggpht.com/a/AGF-l78km1YyNXmF0r3-0CycCA0HLA_i6zYn_8NZEg=s900-c-k-c0xffffffff-no-rj-mo" type="image/gif" sizes="16x16">
+    
+    <!-- FontAwesome & Google Fonts -->
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/orderPlaced.css">
+</head>
+<body>  
+
+    <!-- HEADER -->
+    <div id="header"></div>
+
+    <!-- ORDER PLACED -->
+    <div id="orderContainer">
+        <div id="check"><i class="fas fa-check-circle"></i></div>
+        
+        <div id="aboutCheck">
+            <h1> Order Placed Successfully! </h1>
+            <p> We've sent you an email with the Order details. </p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer"></div>
+
+    <!-- Load Header and Footer -->
+    <script>
+        async function load(url, id) {
+            try {
+                let res = await fetch(url);
+                if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
+                let text = await res.text();
+                document.getElementById(id).innerHTML = text;
+            } catch (error) {
+                console.error(`Error loading ${url}:`, error);
+            }
+        }
+
+        load("header.html", "header");
+        load("footer.html", "footer");
+    </script>
+
+    <!-- Order Placed Script -->
+    <script src="js/orderPlaced.js"></script>
+
+</body>
+</html>

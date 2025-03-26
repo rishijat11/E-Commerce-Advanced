@@ -1,0 +1,210 @@
+#container {
+    background-color: white;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1.5fr 1.5fr 5fr 1fr;
+    z-index: 1;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-sizing: border-box;
+    position: fixed;
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.302), 0 2px 6px rgba(60, 64, 67, 0.149);
+    top: 0px; /* Reduced space above slider */
+}
+
+#shopName {
+    font-size: 40px;
+}
+
+#shopName a {
+    text-decoration: none;
+    color: rgb(29, 29, 29);
+}
+
+#shopName > b {
+    font-weight: 900;
+}
+
+#collection {
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px; /* Reduced space above the collection */
+}
+
+#collection a {
+    text-decoration: none;
+    color: rgb(29, 29, 29);
+}
+
+/* Added margin-top to move "Clothing for Men" and "Clothing for Women" sections down */
+.clothingForMen, .clothingForWomen {
+    margin-top: 30px;
+}
+
+/* ----------------------------- MEDIA QUERY --------------------------- */
+
+@media(max-width: 1300px) {
+    #collection {
+        font-size: 13px;
+    }
+    #input {
+        width: 25em;
+    }
+}
+
+@media(max-width: 1212px) {
+    #collection {
+        font-size: 13px;
+    }
+    #input {
+        width: 20em;
+    }
+    .addedToCart {
+        font-size: 1.5em;
+        margin: 10px 20px;
+    }
+}
+
+@media(max-width: 1090px) {
+    #container {
+        grid-template-columns: 1fr 2fr 0.5fr;
+    }
+    #search {
+        display: none;
+    }
+}
+
+@media(max-width: 750px) {
+    #shopName {
+        font-size: 28px;
+    }
+    #collection {
+        font-size: 12px;
+    }
+    .userIcon {
+        font-size: 35px;
+    }
+    .addedToCart {
+        font-size: 1.2em;
+        margin: 10px 20px;
+    }
+}
+
+@media(max-width: 650px) {
+    #shopName {
+        font-size: 24px;
+    }
+    #collection {
+        font-size: 10px;
+    }
+    .userIcon {
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 550px) {
+    #container {
+        padding: 20px 25px;
+    }
+}
+
+/* Badge media queries */
+
+@media(max-width: 1480px) {
+    #badge {
+        right: 150px;
+    }
+}
+
+@media(max-width: 1426px) {
+    #badge {
+        right: 142px;
+    }
+}
+
+@media(max-width: 1360px) {
+    #badge {
+        right: 136px;
+    }
+}
+
+@media(max-width: 1320px) {
+    #badge {
+        right: 129px;
+    }
+}
+
+@media(max-width: 1259px) {
+    #badge {
+        right: 119px;
+    }
+}
+
+@media(max-width: 1212px) {
+    #badge {
+        right: 96px;
+    }
+}
+
+@media(max-width: 1155px) {
+    #badge {
+        right: 87px;
+    }
+}
+
+@media(max-width: 1090px) {
+    #badge {
+        right: 119px;
+    }
+}
+
+@media(max-width: 1030px) {
+    #badge {
+        right: 109px;
+    }
+}
+
+@media(max-width: 970px) {
+    #badge {
+        right: 100px;
+    }
+}
+
+@media(max-width: 910px) {
+    #badge {
+        right: 94px;
+    }
+}
+
+@media(max-width: 850px) {
+    #badge {
+        right: 87px;
+    }
+}
+
+@media(max-width: 750px) {
+    #badge {
+        right: 87px;
+        padding: 3px 6px;
+        font-size: 12px;
+        top: 12px;
+    }
+}
+
+@media(max-width: 650px) {
+    #badge {
+        right: 78px;
+    }
+}
+
+@media(max-width: 550px) {
+    #badge {
+        right: 62px;
+        top: 18px;
+    }
+}

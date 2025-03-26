@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>E-COMMERCE WEBSITE | CREATED BY RISHI</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://yt3.ggpht.com/a/AGF-l78km1YyNXmF0r3-0CycCA0HLA_i6zYn_8NZEg=s900-c-k-c0xffffffff-no-rj-mo" type="image/gif" sizes="16x16">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+    <!-- Slick Carousel (Slider) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+
+    <!-- Custom CSS --a>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div id="header"></div>
+    
+    <!-- SLIDER -->
+    <div id="slider"></div>
+
+    <!-- CONTENT SECTION -->
+    <div id="content"></div>
+
+    <!-- LINK TO PRODUCT PAGE -->
+    <a href="product.html">Go to Product Page</a>
+    
+    <!-- LINK TO CART PAGE -->
+    <a href="cart.html">Go to Cart</a>
+
+    <!-- FOOTER -->
+    <div id="footer"></div>
+
+    <!-- JavaScript for Dynamic Section Loading -->
+    <script>
+        function load(id, url) {
+            let req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(id).innerHTML = req.responseText;
+        }
+
+        load("header", "header.html");
+        load("slider", "slider.html");
+        load("content", "content.html");
+        load("footer", "footer.html");
+
+        // Change "Sign In" to "Account" if user is logged in
+        document.addEventListener("DOMContentLoaded", function () {
+            let user = localStorage.getItem("user");
+            let signInLink = document.querySelector("#header a[href='login.html']");
+            
+            if (user && signInLink) {
+                signInLink.innerText = "Account";
+                signInLink.href = "account.html"; // Redirect to account page
+            }
+        });
+    </script>
+
+    <!-- jQuery (Ensure jQuery is loaded before using Slick) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#containerSlider').slick({
+                dots: true,
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1500,
+            });
+        }); 
+    </script>
+
+    <!-- Content JavaScript -->
+    <script src="content.js"></script>
+    <script src="product.js"></script>
+    <script src="cart.js"></script>
+
+</body>
+</html>

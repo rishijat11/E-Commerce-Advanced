@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HEADER | E-COMMERCE WEBSITE</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://yt3.ggpht.com/a/AGF-l78km1YyNXmF0r3-0CycCA0HLA_i6zYn_8NZEg=s900-c-k-c0xffffffff-no-rj-mo" type="image/gif" sizes="16x16">
+    
+    <!-- External Links -->
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset & Global Styles */
+        * {
+            margin: 10;
+            padding: 10;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+
+        /* Header Container */
+        #container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: #222;
+        }
+
+        /* Shop Name */
+        #shopName a {
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            background: linear-gradient(90deg, #ff8800, #ffcc00, #ff8800);
+            background-clip: text;
+    
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8);
+            transition: transform 0.3s ease-in-out;
+        }
+        #shopName a:hover {
+            transform: scale(1.1);
+        }
+
+        /* Collection Menu */
+        #collection {
+            display: flex;
+            gap: 30px;
+        }
+        #collection a {
+            color: #FFD700;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s ease-in-out;
+        }
+        #collection a:hover {
+            text-shadow: 0px 0px 20px rgba(255, 215, 0, 1);
+        }
+
+        /* Search Bar */
+        #search {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 7px 15px;
+            border-radius: 25px;
+            transition: box-shadow 0.3s;
+        }
+        #search:hover {
+            box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.8);
+        }
+        #search input {
+            border: none;
+            outline: none;
+            padding: 5px;
+            width: 250px;
+        }
+
+        /* User Section */
+        #user {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        /* Cart Button */
+        #cart {
+            display: flex;
+            align-items: center;
+            background-color: #ff9900;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            transition: background 0.3s ease-in-out;
+            position: relative;
+        }
+        #cart i {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+        #cart:hover {
+            background-color: #cc7a00;
+        }
+
+        /* Cart Badge */
+        #badge {
+            position: absolute;
+            top: -5px;
+            right: -10px;
+            background: red;
+            color: white;
+            font-size: 12px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        /* Sign-In Button */
+        #signin {
+            padding: 8px 15px;
+            background: #0073e6;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.3s ease-in-out;
+        }
+        #signin:hover {
+            background: #005bb5;
+        }
+
+        /* User Icon */
+        #userIcon {
+            font-size: 22px;
+            color: white;
+            transition: color 0.3s ease-in-out;
+        }
+        #userIcon:hover {
+            color: #FFD700;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <section>
+            <!-- MAIN CONTAINER -->
+            <div id="container">
+                <!-- SHOP NAME -->
+                <div id="shopName">
+                    <a href="index.html">RishiZone</a>
+                </div>
+
+                <!-- COLLECTIONS -->
+                <div id="collection">
+                    <a href="clothing.html">CLOTHING</a>
+                    <a href="accessories.html">ACCESSORIES</a>
+                </div>
+
+                <!-- SEARCH SECTION -->
+                <div id="search">
+                    <i class="fas fa-search search"></i>
+                    <input type="text" id="input" name="searchBox" placeholder="Search for Clothing and Accessories">
+                </div>
+
+                <!-- USER SECTION -->
+                <div id="user">
+                    <a href="cart.html" id="cart">
+                        <i class="fas fa-shopping-cart"></i> Cart
+                        <div id="badge">0</div>
+                    </a>
+                    <a href="signin.html" id="signin">Sign In</a>
+                    <a href="#"><i class="fas fa-user-circle" id="userIcon"></i></a>
+                </div>
+            </div>
+        </section>
+    </header>
+
+</body>
+</html>
